@@ -29,3 +29,7 @@ params:
 ## License
 
 MIT — See LICENSE file.
+
+## Note
+
+The exampleSite content was generated with AI assistance.
