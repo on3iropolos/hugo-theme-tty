@@ -48,6 +48,7 @@ jobs:
 
       - name: Build
         run: |
+          mkdir -p exampleSite/themes
           cd exampleSite
           ln -sf ../ themes/tty
           hugo build \
