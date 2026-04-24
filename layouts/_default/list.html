@@ -2,7 +2,7 @@
 
 <div class="terminal-output">
     <div class="terminal-header">
-        <span class="terminal-title">~/{{ .File.Path | default .Title }}</span>
+        <span class="terminal-title">~/{{ with .File }}{{ .Path }}{{ else }}{{ lower .Title }}{{ end }}</span>
     </div>
     <div class="terminal-body">
         {{ .Content }}
