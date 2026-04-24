@@ -38,6 +38,9 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
+      - name: Fetch latest theme
+        run: git submodule update --init --recursive --remote
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
