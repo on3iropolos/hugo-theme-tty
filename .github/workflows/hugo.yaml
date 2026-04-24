@@ -48,14 +48,7 @@ jobs:
 
       - name: Build
         run: |
-          mkdir -p exampleSite/themes
-          cd exampleSite
-          ln -sf ../ themes/tty
-          hugo build \
-            -t tty \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo build -s exampleSite -t tty --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
