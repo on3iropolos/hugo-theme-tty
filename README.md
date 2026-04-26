@@ -39,7 +39,7 @@ params:
 
 ### Custom ASCII Art
 
-Set `asciiArt` in your config to display custom ASCII art in the terminal header:
+Set `asciiArt` in your config to display custom ASCII art in the terminal header. You can generate ASCII art at [patorjk.com/software/taag](https://patorjk.com/software/taag):
 
 ```yaml
 params:
