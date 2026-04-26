@@ -26,6 +26,28 @@ params:
     hostname: hostname
 ```
 
+### Theme Params
+
+| Param | Description | Default |
+|-------|-------------|---------|
+| `tty.username` | Shell username in prompt | `user` |
+| `tty.hostname` | Shell hostname in prompt | - |
+| `tty.path` | Current path in prompt | `~` |
+| `tty.showTerminalHeader` | Show "~/path" terminal header on pages | `true` |
+| `tty.showLatestPosts` | Show latest posts on homepage | `true` |
+| `tty.showPostsList` | Show posts in list views | `true` |
+
+### Custom ASCII Art
+
+Set `asciiArt` in your config to display custom ASCII art in the terminal header:
+
+```yaml
+params:
+  asciiArt: |
+      _   _
+      \ \_//  v1.0
+```
+
 ## License
 
 MIT — See LICENSE file.
