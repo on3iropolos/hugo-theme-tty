@@ -1,14 +1,17 @@
 {{ define "main" }}
 
 <div class="terminal-output">
+    {{ if .Site.Params.tty.showTerminalHeader }}
     <div class="terminal-header">
         <span class="terminal-title">~/about.md</span>
     </div>
+    {{ end }}
     <div class="terminal-body">
         {{ .Content }}
     </div>
 </div>
 
+{{ if .Site.Params.tty.showLatestPosts }}
 <h1>Latest posts</h1>
 
 <div class="posts-list">
@@ -29,5 +32,6 @@
     {{ end }}
 {{ end }}
 </div>
+{{ end }}
 
 {{ end }}

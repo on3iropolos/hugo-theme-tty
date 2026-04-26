@@ -1,5 +1,4 @@
 {{ define "main" }}
-
 <div class="terminal-output">
     {{ if .Site.Params.tty.showTerminalHeader }}
     <div class="terminal-header">
@@ -7,22 +6,16 @@
     </div>
     {{ end }}
     <div class="terminal-body">
-        {{ .Content }}
-    </div>
-</div>
-
-{{ if .Site.Params.tty.showPostsList }}
-<div class="posts-list">
+        {{ if .Site.Params.tty.showPostsList }}
+        <div class="posts-list">
 {{ range .Paginator.Pages }}
     <div class="post">
-        <p>
-            <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-            <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-            {{ .Summary }}
-        </p>
+        <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+        <span class="date">{{ .Date | time.Format "2006-01-02" }}</span>
+        {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
     </div>
 {{ end }}
-
+        </div>
 {{ if or .Paginator.HasPrev .Paginator.HasNext }}
 <div class="pagination">
     {{ if .Paginator.HasPrev }}
@@ -34,7 +27,7 @@
     {{ end }}
 </div>
 {{ end }}
+        {{ end }}
+    </div>
 </div>
-{{ end }}
-
 {{ end }}

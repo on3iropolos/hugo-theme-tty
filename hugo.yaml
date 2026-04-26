@@ -24,10 +24,16 @@ menus:
 params:
   description: Personal website of a developer
   author: Your Name
+  asciiArt: |
+    _   _
+    \ \_//  v1.0
   tty:
     username: user
     hostname: example.com
     path: ~
+    showTerminalHeader: true
+    showLatestPosts: true
+    showPostsList: true
   featured_image: /images/profile.jpg
   google_verify: your-google-site-verification-code
   bing_verify: your-bing-site-verification-code
