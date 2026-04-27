@@ -39,14 +39,9 @@ params:
 
 ### Custom ASCII Art
 
-Set `asciiArt` in your config to display custom ASCII art in the terminal header. You can generate ASCII art at [patorjk.com/software/taag](https://patorjk.com/software/taag):
+Create an `ascii-art.txt` file in your project's root directory to display custom ASCII art in the terminal header. You can generate ASCII art at [patorjk.com/software/taag](https://patorjk.com/software/taag).
 
-```yaml
-params:
-  asciiArt: |
-      _   _
-      \ \_//  v1.0
-```
+If `ascii-art.txt` is not present, the theme displays a default ASCII art logo.
 
 ## License
 

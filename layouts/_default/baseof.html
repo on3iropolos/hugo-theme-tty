@@ -35,7 +35,20 @@
               <span class="prompt-command">echo $ASCI_ART</span>
             </div>
             <div class="terminal-ls-output">
-{{ partial "ascii.html" . }}
+                <pre class="ascii-art">
+                {{- if fileExists "ascii-art.txt" }}
+                    {{- readFile "ascii-art.txt" }}
+                {{- else }}
+_   _           _   _
+| | | |         | | | |
+| |_| |_ _   _  | |_| |__   ___ _ __ ___   ___
+| __| __| | | | | __| '_ \ / _ \ '_ ` _ \ / _ \
+| |_| |_| |_| | | |_| | | |  __/ | | | | |  __/
+ \__|\__|\__, |  \__|_| |_|\___|_| |_| |_|\___|
+          __/ |
+         |___/
+                {{- end }}
+                </pre>
             </div>
             <div class="terminal-prompt">
               <span class="prompt-user">{{ .Site.Params.tty.username }}</span><span class="prompt-at">@</span><span class="prompt-host">{{ .Site.Params.tty.hostname }}</span><span class="prompt-sep">:</span><span class="prompt-path">{{ .Site.Params.tty.path | default "~" }}</span><span class="prompt-char">$</span>
